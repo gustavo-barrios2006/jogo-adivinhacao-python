@@ -1,8 +1,7 @@
 print("* Bem vindo ao jogo de adivinhação *")
 numero_secreto=42
 total_de_tentativas=3
-rodada=1
-while(rodada<=total_de_tentativas):
+for rodada in range(1, total_de_tentativas+1):
     print("Rodada {} de {}".format(rodada, total_de_tentativas))
     chute=int(input("Digite seu chute"))
     if(chute==numero_secreto):
@@ -12,5 +11,4 @@ while(rodada<=total_de_tentativas):
         print("Você errou! O seu chute foi menor que o número secreto.")
     else:
         print("Você errou! O seu chute foi maior que o número secreto.")
-    rodada+=1
 print("Fim do jogo")
