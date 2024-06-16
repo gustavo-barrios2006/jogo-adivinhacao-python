@@ -3,7 +3,7 @@ numero_secreto=42
 total_de_tentativas=3
 rodada=1
 while(rodada<=total_de_tentativas):
-    print("Rodada", rodada, "de", total_de_tentativas)
+    print("Rodada {} de {}".format(rodada, total_de_tentativas))
     chute=int(input("Digite seu chute"))
     if(chute==numero_secreto):
         print("Você acertou!")
