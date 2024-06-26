@@ -12,6 +12,7 @@ elif(nivel==2):
     total_de_tentativas=10
 else:
     total_de_tentativas=5
+pontos=1000
 for rodada in range(1, total_de_tentativas+1):
     print("Rodada {} de {}".format(rodada, total_de_tentativas))
     chute=int(input("Digite seu chute"))
@@ -19,10 +20,11 @@ for rodada in range(1, total_de_tentativas+1):
         print("Você deve digitar um número entre 1 e 100")
         continue
     if(chute==numero_secreto):
-        print("Você acertou!")
+        print("Você acertou e fez {} pontos!".format(pontos))
         break
     elif chute<numero_secreto:
         print("Você errou! O seu chute foi menor que o número secreto.")
     else:
         print("Você errou! O seu chute foi maior que o número secreto.")
+    pontos-=abs(chute-numero_secreto)
 print("Fim do jogo")
