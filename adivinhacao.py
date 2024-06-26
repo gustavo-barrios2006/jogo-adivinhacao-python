@@ -1,7 +1,17 @@
 import random
 print("* Bem vindo ao jogo de adivinhação *")
 numero_secreto=random.randrange(1, 101)
-total_de_tentativas=3
+print("Qual o nível de dificuldade?")
+print("(1) Fácil (2) Médio (3) Difícil")
+nivel=int(input("Defina o nível: "))
+while(nivel<=0 or nivel>3):
+    nivel=int(input("Nível inválido, digite um número de 1 a 3: "))
+if(nivel==1):
+    total_de_tentativas=20
+elif(nivel==2):
+    total_de_tentativas=10
+else:
+    total_de_tentativas=5
 for rodada in range(1, total_de_tentativas+1):
     print("Rodada {} de {}".format(rodada, total_de_tentativas))
     chute=int(input("Digite seu chute"))
